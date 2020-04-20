@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header">
+      <h2>TRAVEL ASSISTANT</h2>
+    </header>
+
+    <main>
+      <section class="section1">
+        <div class="trip-info">
+          <div class="departure">
+            <label>Trip Date:</label>
+            <input class="date1" type="date" />
+          </div>
+
+          <form class="form" id="input-form">
+            <input type="text" class="city-text" placeholder="Enter city" />
+          </form>
+        </div>
+      </section>
+
+      <section class="section2">
+        <div class="section2-cont">
+          <div class="photo"></div>
+          <div class="headings">
+            <h2 class="destination"></h2>
+            <h3 class="date-heading"></h3>
+          </div>
+        </div>
+      </section>
+
+      <section class="section3">
+        <h1>Weather Forecast for your destination</h1>
+        <div class="weather-cont">
+          <div class="sub-cont cont-1">
+            <h3 class="weather1"></h3>
+            <h3 class="day1"></h3>
+          </div>
+
+          <div class="sub-cont cont-2">
+            <h3 class="weather2"></h3>
+            <h3 class="day2"></h3>
+          </div>
+
+          <div class="sub-cont cont-3">
+            <h3 class="weather3"></h3>
+            <h3 class="day3"></h3>
+          </div>
+
+          <div class="sub-cont cont-4">
+            <h3 class="weather4"></h3>
+            <h3 class="day4"></h3>
+          </div>
+
+          <div class="sub-cont cont-5">
+            <h3 class="weather5"></h3>
+            <h3 class="day5"></h3>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <h3>Created by Omogbare Sikpojie</h3>
+    </footer>
+
+    <!-- <script src="../index.js"></script> -->
+    <script>
+      // Check that service workers are supported
+      if ("serviceWorker" in navigator) {
+        // Use the window load event to keep the page load performant
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("/service-worker.js");
+        });
+      }
+    </script>
+  </body>
+</html>
